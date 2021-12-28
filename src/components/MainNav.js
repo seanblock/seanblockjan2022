@@ -1,6 +1,9 @@
-import {Row, Col, Container} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
+import { useState } from 'react';
 
 const MainNav = () => {
+
+    const [activeLink, setActiveLink] = useState("home")
 
     const MovePage = (x) => {
         console.log("X:" + x);
@@ -27,6 +30,8 @@ const MainNav = () => {
             <Col className="d-flex justify-content-center align-items-center">
                 <button onClick={()=>{MovePage("home")}}>Home</button>
                 <button  onClick={()=>{MovePage("about")}}>About</button>
+                <button  onClick={()=>{MovePage("portfolio")}}>Portfolio</button>
+                <button  onClick={()=>{MovePage("resume")}}>Resume</button>
             </Col>
 
             {/* Social Media Icons */}

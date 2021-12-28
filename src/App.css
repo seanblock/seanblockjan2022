@@ -1,7 +1,7 @@
 .content {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 70px auto;
+  grid-template-rows: 100px auto;
   height: 100vh;
   width: 100vw;
   background-color: black;
@@ -19,9 +19,17 @@ nav {
 
 nav button {
   background-color: transparent;
-  color: white;
+  color: rgba(255, 255, 255, 0.623);
   border: none;
+  transition: all ease-in .25s;
   margin: 0 10px;
+  border: 1px solid transparent;
+}
+
+nav button:hover {
+  color: rgb(66, 44, 187);
+  border: 1px solid rgb(66, 44, 187);
+  border-radius: 6px;
 }
 
 .ether {
@@ -51,7 +59,7 @@ nav button {
 
 /* Home Page */
 #home {
-  background-color: transparent;
+  background-color: black;
   width: 100%;
   height: 100%;
   display: flex;
@@ -66,6 +74,30 @@ nav button {
   justify-content: center;
   align-items: center;
   position: relative;
+  
+}
+
+.square {
+  width: 800px;
+  height: 800px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: -webkit-linear-gradient(45deg, rgb(255, 255, 255), rgb(17, 33, 255));
+  filter: opacity(.4);
+  z-index: 1;
+  animation: slideup 20s infinite linear;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(150%)  translateX(10%);
+  }
+
+  to {
+    transform: translateY(-150%)  translateX(10%);
+  }
 }
 
 #myself {
@@ -78,8 +110,10 @@ nav button {
 
 #myself h1 {
   font-size: 5rem !important;  
-  color: turquoise;
-
+  color: #f2f7ff;
+  background: -webkit-linear-gradient(45deg, rgb(47, 110, 226), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -93,14 +127,20 @@ nav button {
   align-items: center;
   width: 500px;
   height: 500px;
-  border-radius: 50%;
-  border: 2px solid white;
   background: url('./img/dog.png');
   background-size: cover;
   background-repeat: no-repeat;
   transition: all ease-in 1s;
   transform: rotate(0);
+  border-radius: 50% !important;
+  /* border: 2px solid white; */
+  border: 10px solid !important;
+  border-image-slice: 1 !important;
+  border-width: 5px !important;
+  border-image-source: radial-gradient(circle at top left, rgba(255, 0, 0, 0), #e520ff, rgb(66, 44, 187)) !important;
+  z-index: 2;
 }
+
 
 .logo-box-animate {
   transform: rotate(90deg) !important;
@@ -139,7 +179,7 @@ nav button {
 
 #social i:hover {
   transform: scale(1.2);
-  color: whitesmoke;
+  color: #ff20b5;
 }
 
 #social a {
