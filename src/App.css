@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+.content {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 70px auto;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  border-bottom: 1px solid rgba(158, 158, 158, 0.212);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+nav button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  margin: 0 10px;
+}
+
+.ether {
+  color: rgba(250, 235, 215, 0.445);
+}
+
+
+
+/* Pages */
+#wrapper {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease-in 1s;
+}
+
+
+/* Home Page */
+#home {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  width: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#myself {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#myself h1 {
+  font-size: 5rem !important;  
+  color: turquoise;
+
+}
+
+
+#logo {
+  width: 100%;
+  height: auto;
+}
+
+#logo-box {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: url('./img/dog.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in 1s;
+  transform: rotate(0);
+}
+
+.logo-box-animate {
+  transform: rotate(90deg) !important;
+  filter: opacity(.1);
+}
+
+#logo-box ul {
+  transform: translateX(100%);
+  width: 500px;
+  list-style: none;
+}
+
+
+/* About Page */
+#about {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+}
+
+/* Social */
+#social {
+  z-index: 2;
+  background-color: transparent;
+  width: 100%;
+  text-align: right;
+}
+
+#social i {
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  color: rgba(250, 235, 215, 0.507);
+  transition: all ease .35s;
+}
+
+#social i:hover {
+  transform: scale(1.2);
+  color: whitesmoke;
+}
+
+#social a {
+  display: inline-block;
 }
