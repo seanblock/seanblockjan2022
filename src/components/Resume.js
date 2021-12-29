@@ -1,5 +1,3 @@
-import army from '../img/army.png';
-import rpi from '../img/rpi.png';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Resume = () => {

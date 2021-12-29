@@ -1,5 +1,5 @@
 import {Col} from 'react-bootstrap';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 const MainNav = () => {
 

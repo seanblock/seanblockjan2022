@@ -1,6 +1,5 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './img/dog.png';
 import MainNav from './components/MainNav';
 import Home from './components/Home';
 import About from './components/About';

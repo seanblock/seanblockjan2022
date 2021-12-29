@@ -1,4 +1,3 @@
-import { findByPlaceholderText } from "@testing-library/react";
 import { useState } from "react";
 import wallet from '../img/wallet.png'
 
@@ -10,8 +9,6 @@ const Home = () => {
         Y: 0
     })
 
-    const [page, setPage] = useState("");
-
     const handleMouseMove = (e) => {
 
         let pX = e.pageX;
@@ -20,13 +17,13 @@ const Home = () => {
         let wY = window.innerHeight;
 
 
-            let formulaX = (pX - wX/2) / 20;
-            let formulaY = ((wY/2 - pY) / 20);
+        let formulaX = (pX - wX/2) / 20;
+        let formulaY = ((wY/2 - pY) / 20);
 
-            setMousePosition({
-                X: formulaX, 
-                Y: formulaY
-            }); 
+        setMousePosition({
+            X: formulaX, 
+            Y: formulaY
+        }); 
     }
 
     const FrontSwap = () => {
