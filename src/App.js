@@ -4,6 +4,11 @@ import logo from './img/dog.png';
 import MainNav from './components/MainNav';
 import Home from './components/Home';
 import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
+
+import Gear from './components/Gear';
+import Gear2 from './components/Gear2';
 
 function App() {
 
@@ -11,13 +16,12 @@ function App() {
   return (
     <div className="content">
       <MainNav/>
-      <div id="wrapper">
-        {/* <div className="square"></div> */}
-        <div className="pages">
-          <Home />
-          <About />
-        </div>
-      </div>
+      <Home />
+      <About />
+      <Portfolio />
+      <Resume />
+      <Gear />
+      <Gear2 />
     </div>
   );
 }
