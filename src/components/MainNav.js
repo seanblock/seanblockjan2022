@@ -1,4 +1,4 @@
-import {Col, Navbar, Container, Nav} from 'react-bootstrap';
+import {Navbar, Container, Nav, Col, Button} from 'react-bootstrap';
 import { useEffect } from 'react';
 
 const MainNav = () => {
@@ -115,20 +115,23 @@ const MainNav = () => {
     }, []);
 
     return (
-        <Navbar bg="dark"
+        <Navbar
             collapseOnSelect 
             expand="lg  " 
             id="navbar" 
             onMouseOver={()=>{BlurBox(true)}}
             onMouseOut={()=>{BlurBox(false)}}
         >
-            <Container>
-                <Navbar.Brand href="#home">seanblock.eth</Navbar.Brand>
+            <Container id="navbar-container">
+                <Col className=''>                    
+                    seanblock.eth
+                </Col>
                 <Navbar.Toggle 
                     id="navbar-c"
                     aria-controls="responsive-navbar-nav" 
                     expanded="expanded"
-                />
+                ><Button className='btn-light-outline bg-dark text-light border-light'>Menu</Button></Navbar.Toggle>
+                <Col className='text-center'>
                 <Navbar.Collapse 
                     id="responsive-navbar-nav" 
                     className="text-sm-center">
@@ -137,7 +140,7 @@ const MainNav = () => {
                             return(
                                 <Nav.Link 
                                     id={`${item}-btn`} 
-                                    className="nav-buttons px-3 bg-dark rounded"
+                                    className="nav-buttons px-3"
                                     onClick={()=>{MovePage(item)}}
                                     onMouseOver={()=>{NameChange(true, item)}}
                                     onMouseOut={()=>{NameChange(false, "Sean Block")}}
@@ -149,6 +152,10 @@ const MainNav = () => {
                         })
                     }
                 </Navbar.Collapse>
+                </Col>
+                <Col className='fs-3 text-end'>                    
+                    <a href="https://github.com/seanblock" target="_blank" class="devicon-github-original text-light text-decoration-none"></a>
+                </Col>
             </Container>
         </Navbar>
      );

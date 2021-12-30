@@ -75,7 +75,7 @@ const Home = () => {
                         }
                     </div>
                     <div id="logo-box-back" className="p-1">
-                        Crypto to the moon 🚀🌕
+                        <p>Crypto to the moon 🚀🌕</p>
                     </div>
                     <div id="logo-box-left"></div>
                     <div id="logo-box-right"></div>
