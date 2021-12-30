@@ -41,6 +41,8 @@ const Home = () => {
             id="home" 
             className='page'
             onMouseMove={(e)=>{handleMouseMove(e)}}
+            onTouchMove={(e)=>{handleMouseMove(e)}}
+            onTouchStart={(e)=>{handleMouseMove(e)}}
         >
             <div className="box">
                 <div 

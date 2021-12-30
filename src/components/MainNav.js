@@ -1,4 +1,4 @@
-import {Col} from 'react-bootstrap';
+import {Col, Navbar, Container, Nav} from 'react-bootstrap';
 import { useEffect } from 'react';
 
 const MainNav = () => {
@@ -103,46 +103,54 @@ const MainNav = () => {
         }
     }
 
+    const websiteLinks = [
+        "home",
+        "about",
+        "portfolio",
+        "resume"
+    ]
+
     useEffect(() => {
         document.getElementById("home-btn").classList.add("pink-font")
     }, []);
 
     return (
-        <nav 
+        <Navbar bg="dark"
+            collapseOnSelect 
+            expand="lg  " 
             id="navbar" 
             onMouseOver={()=>{BlurBox(true)}}
             onMouseOut={()=>{BlurBox(false)}}
         >
-            {/* Ether name */}
-            <Col className="mx-3 ether">
-                SeanBlock.eth
-            </Col>
-
-            {/* Nav Buttons */}
-            <Col className="d-flex justify-content-center align-items-center">
-
-                {
-                    ["home", "about", "portfolio", "resume"].map((item)=>{
-                        return(
-                        <button 
-                            id={`${item}-btn`} 
-                            onClick={()=>{MovePage(item)}}
-                            onMouseOver={()=>{NameChange(true, item)}}
-                            onMouseOut={()=>{NameChange(false, "Sean Block")}}
-                        >
-                            {item}
-                        </button>
-                        )
-                    })
-                }
-            </Col>
-
-            {/* Social Media Icons */}
-            <Col id="social" className="mx-3">
-                <a href="#github"><i class="fab fa-github"></i></a>
-                <a href="#email"><i class="fab fa-facebook"></i></a>
-            </Col>
-        </nav>
+            <Container>
+                <Navbar.Brand href="#home">seanblock.eth</Navbar.Brand>
+                <Navbar.Toggle 
+                    id="navbar-c"
+                    aria-controls="responsive-navbar-nav" 
+                    expanded="expanded"
+                />
+                <Navbar.Collapse 
+                    id="responsive-navbar-nav" 
+                    className="text-sm-center">
+                    {
+                        websiteLinks.map((item, key)=>{
+                            return(
+                                <Nav.Link 
+                                    id={`${item}-btn`} 
+                                    className="nav-buttons px-3 bg-dark rounded"
+                                    onClick={()=>{MovePage(item)}}
+                                    onMouseOver={()=>{NameChange(true, item)}}
+                                    onMouseOut={()=>{NameChange(false, "Sean Block")}}
+                                    eventKey={key}
+                                >
+                                    {item}
+                                </Nav.Link>
+                            )
+                        })
+                    }
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
      );
 }
  

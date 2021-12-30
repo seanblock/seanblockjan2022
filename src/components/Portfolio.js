@@ -1,11 +1,17 @@
+import { Container } from "react-bootstrap";
+import Github from "./Portfolio/Github";
+import Websites from "./Portfolio/Websites";
+
 const Portfolio = () => {
+
     return ( 
         <div id="portfolio" className='page'>
-            <div className="container">
-                <div className="row">
-                    <div className="col">Testing3</div>
-                    <div className="col">Testing4</div>
-                </div>
+            <div className="page-container">
+                {/* Content */}
+                <Container className='scrolling'>
+                    <Websites />
+                    {/* <Github /> */}
+                </Container>
             </div>
         </div>
     );
