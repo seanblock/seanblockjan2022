@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/seanblockjan2022/static/css/main.711d9b43.css",
-    "main.js": "/seanblockjan2022/static/js/main.3b7512df.js",
+    "main.css": "/seanblockjan2022/static/css/main.8201d752.css",
+    "main.js": "/seanblockjan2022/static/js/main.a7e99039.js",
     "static/js/787.79431071.chunk.js": "/seanblockjan2022/static/js/787.79431071.chunk.js",
+    "static/media/BlockWedding.png": "/seanblockjan2022/static/media/BlockWedding.0f0ad0b63b78f65e2e31.png",
+    "static/media/hvcc.png": "/seanblockjan2022/static/media/hvcc.60bc4b83216481a7466d.png",
     "static/media/army.png": "/seanblockjan2022/static/media/army.00b7c9cb5a2d9bcd0716.png",
+    "static/media/megna.png": "/seanblockjan2022/static/media/megna.12f83134df3a7e1f9a95.png",
     "static/media/dog.png": "/seanblockjan2022/static/media/dog.3b0af49452f0ae13707a.png",
     "static/media/cat.png": "/seanblockjan2022/static/media/cat.d6050e03d67b564cc5dd.png",
     "static/media/LEMONMILK-Bold.otf": "/seanblockjan2022/static/media/LEMONMILK-Bold.ac2b6389ba01ca1f431e.otf",
     "static/media/LEMONMILK-Regular.otf": "/seanblockjan2022/static/media/LEMONMILK-Regular.55fc24317b9c2b507dd8.otf",
     "static/media/rpi.png": "/seanblockjan2022/static/media/rpi.f0786f3b1f82f2f2c603.png",
     "index.html": "/seanblockjan2022/index.html",
-    "main.711d9b43.css.map": "/seanblockjan2022/static/css/main.711d9b43.css.map",
-    "main.3b7512df.js.map": "/seanblockjan2022/static/js/main.3b7512df.js.map",
+    "main.8201d752.css.map": "/seanblockjan2022/static/css/main.8201d752.css.map",
+    "main.a7e99039.js.map": "/seanblockjan2022/static/js/main.a7e99039.js.map",
     "787.79431071.chunk.js.map": "/seanblockjan2022/static/js/787.79431071.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.711d9b43.css",
-    "static/js/main.3b7512df.js"
+    "static/css/main.8201d752.css",
+    "static/js/main.a7e99039.js"
   ]
 }
